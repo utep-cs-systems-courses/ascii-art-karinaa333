@@ -26,3 +26,19 @@ void print_triangle(int leftCol, int size)
   }
 }
 
+// Prints an arrow:t:OD
+void print_arrow(int size)
+{
+  // copy for loop and print two spaces (instead of *)
+  print_triangle(size, size);
+  for (int row = 0; row < size; row++){
+    int col;
+    for (col = 0; col < size+3; col++){
+	putchar(' ');
+    }
+    for (col = 0; col < size; col++) {
+	putchar('*');
+    }
+    putchar('\n');
+  }  
+}
